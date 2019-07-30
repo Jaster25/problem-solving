@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<string.h>
-#define MAX(a,b) ( (a)>(b) ? (a) : (b) )
+#define MAX(a,b) (a>b ? a : b)
 
 int d[2][100000];
 int score[2][100000];
@@ -28,7 +28,7 @@ int main() {
 			}
 		}
 		
-		//±âÀú Á¶°Ç 
+		//ê¸°ì € ì¡°ê±´ 
 		d[0][0] = score[0][0];
 		d[1][0] = score[1][0];
 		
@@ -37,7 +37,7 @@ int main() {
 		
 		for(int j=2 ; j<n ; ++j) {
 			
-			//°æ¿ìÀÇ ¼ö 2°¡Áö Áß (ÇÑ ¿­ °Ç³Ê¶Ù±â)
+			//ê²½ìš°ì˜ ìˆ˜ 2ê°€ì§€ ì¤‘ (í•œ ì—´ ê±´ë„ˆë›°ê¸°)
 			d[0][j] = MAX(d[1][j-2], d[1][j-1]) + score[0][j];
 			d[1][j] = MAX(d[0][j-2], d[0][j-1]) + score[1][j];	
 		}

@@ -1,25 +1,24 @@
 #include<stdio.h>
-#include<math.h> 
-#define MAX 1000001
+#include<stdbool.h>
 
-int M, N;
-int notPrime[MAX];
+int N, M;
+bool noPrime[1000001];
 
 int main() {
-	scanf("%d%d", &M, &N);
 	
-	for(int i=M ; i<=N ; ++i) {
-		
-		if(i == 1) notPrime[i] = 1;
-		
-		for(int j=2 ; j<=sqrt(i) ; ++j) {
+	scanf("%d%d", &N, &M);
+
+	noPrime[1] = true;	
+	for(int i = 2 ; i*i <= M ; ++i) {
+
+		if(noPrime[i])
+			continue;
 			
-			if(i % j == 0) {
-				notPrime[i] = 1;
-				break;
-			}
-		}
-		
-		if(notPrime[i] == 0) printf("%d\n", i);
+		for(int j = i+i ; j <= M ; j += i)
+			noPrime[j] = true;
 	}
+	
+	for(int i = N ; i <= M ; ++i)
+		if(noPrime[i] == false)
+			printf("%d\n", i);	
 }

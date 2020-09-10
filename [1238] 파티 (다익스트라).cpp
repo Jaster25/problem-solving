@@ -3,40 +3,40 @@
 using namespace std;
 
 int N, M, X;
-vector<pair<int, int>> graph[1001];
 int dist[1001], result[1001];
+vector<pair<int, int>> graph[1001];
 
 void Input()
 {
     scanf("%d%d%d", &N, &M, &X);
-    int v1, v2, w;
+    int a, b, w;
     for (int i = 0; i < M; ++i)
     {
-        scanf("%d%d%d", &v1, &v2, &w);
-        graph[v1].push_back(make_pair(v2, w));
+        scanf("%d%d%d", &a, &b, &w);
+        graph[a].push_back(make_pair(w, b));
     }
 }
 
 void Dijkstra(int start)
 {
-    priority_queue<pair<int, int>> PQ;
     dist[start] = 0;
-    PQ.push(make_pair(0, start));
+    priority_queue<pair<int, int>> pq;
+    pq.push(make_pair(0, start));
 
-    while (!PQ.empty())
+    while (!pq.empty())
     {
-        int w = -PQ.top().first;
-        int other = PQ.top().second;
-        PQ.pop();
+        int w = -pq.top().first;
+        int v = pq.top().second;
+        pq.pop();
 
-        for (int i = 0; i < graph[other].size(); ++i)
+        for (int i = 0; i < graph[v].size(); ++i)
         {
-            int next = graph[other][i].first;
-            int nextW = graph[other][i].second;
-            if (dist[next] > w + nextW)
+            int nW = graph[v][i].first;
+            int nV = graph[v][i].second;
+            if (dist[nV] > w + nW)
             {
-                dist[next] = w + nextW;
-                PQ.push(make_pair(-dist[next], next));
+                dist[nV] = w + nW;
+                pq.push(make_pair(-dist[nV], nV));
             }
         }
     }
@@ -44,23 +44,24 @@ void Dijkstra(int start)
 
 void Solve()
 {
-    // * home -> party
+    // * students -> party
     for (int i = 1; i <= N; ++i)
     {
-        fill(dist, &dist[1001], INF);
+        fill(dist, dist + 1001, INF);
         Dijkstra(i);
-        result[i] = dist[X];
+        result[i] += dist[X];
     }
 
-    // * party -> home
-    fill(dist, &dist[1001], INF);
+    // * party -> students
+    fill(dist, dist + 1001, INF);
     Dijkstra(X);
 
     for (int i = 1; i <= N; ++i)
         result[i] += dist[i];
 
-    sort(&result[1], &result[N + 1]);
-    printf("%d", result[N]);
+    sort(result + 1, result + N + 1);
+
+    printf("%d ", result[N]);
 }
 
 int main()

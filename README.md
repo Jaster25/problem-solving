@@ -1,11 +1,20 @@
-## 백준 알고리즘 문제풀이
-### BOJ Problem Solving     [백준 링크](https://www.acmicpc.net/problem/tags)
+## 문제 풀이
 
-<hr/>
+<br/>
+
+- [Baekjoon OJ](https://www.acmicpc.net/problem/tags)
+
+- [Codeforces](http://codeforces.com/)
+
+- 코딩 테스트 준비
+
+<br/>
+<br/>
 
 ### 사용 언어
 
 >C
-
-
+>
 >C++
+>
+>Python

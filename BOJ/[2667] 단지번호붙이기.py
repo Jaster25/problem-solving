@@ -11,13 +11,13 @@ def solution():
     cnt = 0
     apart = []
 
+    dy = [-1, 1, 0, 0]
+    dx = [0, 0, -1, 1]
+
     def DFS(y, x):
         visited[y][x] = True
         nonlocal cnt
         cnt += 1
-
-        dy = [-1, 1, 0, 0]
-        dx = [0, 0, -1, 1]
 
         for i in range(4):
             ny = y + dy[i]

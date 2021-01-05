@@ -6,15 +6,15 @@
 
 - [Codeforces](http://codeforces.com/)
 
-- 코딩 테스트 준비
+- [Programmers](https://programmers.co.kr/)
 
 <br/>
 <br/>
 
 ### 사용 언어
 
->C
+> C
 >
->C++
+> C++
 >
->Python
+> Python

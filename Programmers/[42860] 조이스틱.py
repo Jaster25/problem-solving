@@ -30,7 +30,7 @@ def dfs(name, temp, visited, idx, cnt):
 
 def solution(name):
     temp = 'A' * len(name)
-    visited = visited = [[False] * 2 for _ in range(len(name))]
+    visited = [[False] * 2 for _ in range(len(name))]
     dfs(name, temp, visited, 0, 0)
 
     return min(result)

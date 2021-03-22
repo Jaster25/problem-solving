@@ -8,7 +8,6 @@ visited = [[[0] * (K + 1) for _ in range(M)] for _ in range(N)]
 dy = [-1, 0, 1, 0]
 dx = [0, -1, 0, 1]
 
-# Q[k, y, x]
 # 1: wall, 0: road
 Q = deque([[0, 0, 0]])
 visited[0][0][0] = 1

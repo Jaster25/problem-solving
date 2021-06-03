@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
   public int[] solution(int[] progresses, int[] speeds) {
       List<Integer> answer = new ArrayList<Integer>();

@@ -12,7 +12,7 @@
 &nbsp;
 ![GitHub last commit](https://img.shields.io/github/last-commit/jaster25/problem-solving.svg?color=blueviolet)
 
-[![solved.ac tier](http://mazassumnida.wtf/api/v2/generate_badge?boj=Js_328)](https://solved.ac/{js_328})
+[![solved.ac tier](http://mazassumnida.wtf/api/v2/generate_badge?boj=Js_328)](https://solved.ac/js_328)
 
 <br/>
 <!-- <br/> -->

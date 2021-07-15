@@ -2,7 +2,7 @@
 
 알고리즘 문제 풀이 저장소
 
-문제 풀이 리뷰 &nbsp;[**보기**](https://www.notion.so/jaster25/b9efc099c44849e087df0a030750ad1f?v=3facfd78c07847fdb424a6e7c3681996)
+문제 풀이 리뷰 &nbsp;[**보기**](https://jaster25.notion.site/b9efc099c44849e087df0a030750ad1f?v=3facfd78c07847fdb424a6e7c3681996)
 
 <br/>
 

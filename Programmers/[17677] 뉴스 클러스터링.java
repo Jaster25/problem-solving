@@ -3,9 +3,7 @@ package pg17677;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Stack;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

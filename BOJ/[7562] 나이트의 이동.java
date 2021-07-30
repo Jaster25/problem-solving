@@ -12,17 +12,17 @@ public class Main {
     static int[][] visited;
     static int l;
 
-    static int bfs(int fromY, int fromX, int toY, int toX) {
+    static int bfs(Position from, Position to) {
         Queue<Position> queue = new LinkedList<>();
-        queue.offer(new Position(fromY, fromX));
-        visited[fromY][fromX] = 0;
+        queue.offer(new Position(from.y, from.x));
+        visited[from.y][from.x] = 0;
 
         while (!queue.isEmpty()) {
             Position popped = queue.poll();
             int y = popped.y;
             int x = popped.x;
 
-            if (y == toY && x == toX) {
+            if (y == to.y && x == to.x) {
                 break;
             }
 
@@ -38,7 +38,7 @@ public class Main {
             }
         }
 
-        return visited[toY][toX];
+        return visited[to.y][to.x];
     }
 
     public static void main(String[] args) throws IOException {
@@ -60,7 +60,7 @@ public class Main {
             int toY = Integer.parseInt(st.nextToken());
             int toX = Integer.parseInt(st.nextToken());
 
-            answer.add(bfs(fromY, fromX, toY, toX));
+            answer.add(bfs(new Position(fromY, fromX), new Position(toY, toX)));
         }
         br.close();
 

@@ -40,18 +40,18 @@ class Solution {
         return curTime;
     }
 
-    @Test
-    void test() throws Exception {
-        assertEquals(8, solution(2, 10, new int[]{7, 4, 5, 6}));
-    }
-
     static class Truck {
         int arrivalTime;
         int weight;
-
+        
         public Truck(int arrivalTime, int weight) {
             this.arrivalTime = arrivalTime;
             this.weight = weight;
         }
+    }
+
+    @Test
+    void test() throws Exception {
+        assertEquals(8, solution(2, 10, new int[]{7, 4, 5, 6}));
     }
 }

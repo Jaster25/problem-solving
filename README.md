@@ -1,8 +1,8 @@
 # Problem Solving
 
-알고리즘 문제 풀이 저장소
+문제 풀이 코드 저장소
 
-문제 풀이 리뷰 &nbsp;[**보기**](https://jaster25.notion.site/b9efc099c44849e087df0a030750ad1f?v=3facfd78c07847fdb424a6e7c3681996)
+[**문제 풀이 리뷰**](https://jaster25.notion.site/b9efc099c44849e087df0a030750ad1f?v=3facfd78c07847fdb424a6e7c3681996)
 
 <br/>
 
@@ -23,10 +23,11 @@
 
 - [Programmers](https://programmers.co.kr/)
 
+- [LeetCode](https://leetcode.com/)
+
 - [Codeforces](http://codeforces.com/)
 
 <br/>
-<!-- <br/> -->
 
 ## 사용 언어
 
@@ -36,6 +37,4 @@
 
 - C/C++
 
-<!-- TODO -->
-<!-- 사용된 언어 비율 그래프 -->
-<!-- 뱃지 -->
+- SQL

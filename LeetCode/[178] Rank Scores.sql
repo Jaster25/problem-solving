@@ -14,10 +14,10 @@ FROM scores AS s
 ORDER BY s.score DESC;
 
 
--- dense_rank() 메서드 사용
+-- DENSE_RANK() 메서드 사용
 -- Runtime: 218 ms, faster than 98.15%
 SELECT score,
-       dense_rank() OVER(ORDER BY score DESC) AS 'rank'
+       DENSE_RANK() OVER(ORDER BY score DESC) AS 'rank'
 FROM scores;
 
 -- @변수는 해당 connect session에서만 유효한 값

@@ -29,12 +29,11 @@ def calculatePath(board, startY, startX, goalY, goalX):
                 ny += dy[i]
                 nx += dx[i]
                 if not (0 <= ny < 4 and 0 <= nx < 4):
+                    ny -= dy[i]
+                    nx -= dx[i]
                     break
                 if board[ny][nx] != 0:
                     break
-            if not (0 <= ny < 4 and 0 <= nx < 4):
-                ny -= dy[i]
-                nx -= dx[i]
             if isVisited[ny][nx] == -1:
                 queue.append([ny, nx])
                 isVisited[ny][nx] = isVisited[y][x] + 1

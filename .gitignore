@@ -1,5 +1,6 @@
+\#test/
 .vscode
-Workspace/
+workspace/
 
 # macOS
 .DS_Store

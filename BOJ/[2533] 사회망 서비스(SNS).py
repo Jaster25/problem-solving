@@ -1,11 +1,11 @@
 import sys
-from collections import defaultdict
 
 sys.setrecursionlimit(10 ** 6)
 
 # 사이클이 존재하지 않는 관계이다.
-graph = defaultdict(list)
 N = int(sys.stdin.readline())
+# graph = defaultdict(list) -> 메모리 초과 발생
+graph = [[] for _ in range(N + 1)]
 for _ in range(N - 1):
     u, v = map(int, sys.stdin.readline().split())
     graph[u].append(v)

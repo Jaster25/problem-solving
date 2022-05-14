@@ -1,4 +1,3 @@
-
 SELECT DISTINCT l1.num AS 'ConsecutiveNums'
 FROM logs AS l1,
      logs AS l2,
